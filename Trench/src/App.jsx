@@ -1,5 +1,10 @@
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
+    <>
+<Navbar />
+
     <main>
       <section>
         <h1>Trench</h1>
@@ -13,6 +18,7 @@ function App() {
         </button>
       </section>
     </main>
+    </>
   );
 }
 
