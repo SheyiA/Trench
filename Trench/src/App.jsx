@@ -1,23 +1,12 @@
 import Navbar from "./components/Navbar";
-
+import Hero from "./components/Hero";
+import SignupCTA from "./components/SignupCTA";
 function App() {
   return (
     <>
 <Navbar />
-
-    <main>
-      <section>
-        <h1>Trench</h1>
-
-        <p>
-          The live mentorship platform for traders.
-        </p>
-
-        <button>
-          Enter The Trenches
-        </button>
-      </section>
-    </main>
+<Hero />
+<SignupCTA />
     </>
   );
 }

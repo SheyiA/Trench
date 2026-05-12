@@ -101,3 +101,571 @@ nav button:last-child {
 
 
 /* end of nav bar  */
+
+
+/* hero styling */
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 4rem;
+    align-items: start;
+    padding: 4rem 3rem;
+    background: #0b0f14;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    right: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: radial-gradient( circle, rgba(124, 92, 255, 0.18), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-left,
+.hero-right {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-left {
+    max-width: 560px;
+}
+
+.eyebrow {
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin: 0 0 1.5rem 0;
+    color: #f5f7fa;
+}
+
+.hero h1 span {
+    display: block;
+    color: #8b5cf6;
+}
+
+.hero-description {
+    color: #9aa4af;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.hero-actions button {
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.hero-actions button:first-child {
+    background: #7c5cff;
+    color: white;
+    border: none;
+}
+
+.hero-actions button:first-child:hover {
+    background: #9378ff;
+}
+
+.hero-actions button:last-child {
+    background: transparent;
+    color: white;
+}
+
+.hero-actions button:last-child:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-right {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 26px;
+    padding: 1rem;
+}
+
+.journal-card,
+.performance-card,
+.ai-card,
+.streak-card {
+    background: #10161f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.2rem;
+}
+
+.journal-card {
+    grid-row: span 2;
+}
+
+.card-header,
+.trade-summary,
+.mini-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card-header {
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.card-header span,
+small {
+    color: #9aa4af;
+}
+
+.trade-summary {
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.trade-summary span {
+    background: rgba(46, 204, 113, 0.12);
+    color: #2ecc71;
+    padding: 0.35rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.trade-summary h2 {
+    margin: 0;
+    margin-right: auto;
+    font-size: 1.7rem;
+}
+
+.trade-summary strong {
+    color: #2ecc71;
+    font-size: 1.5rem;
+}
+
+.chart-box {
+    height: 260px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0b0f14;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 1rem;
+}
+
+.chart-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mini-grid {
+    gap: 1rem;
+}
+
+.mini-grid div {
+    flex: 1;
+}
+
+.mini-grid p {
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    color: #d3d8df;
+}
+
+.green {
+    color: #2ecc71;
+}
+
+.performance-card h3,
+.ai-card h4,
+.streak-card h4 {
+    margin-top: 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.stats-grid div {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.stats-grid strong {
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 0.4rem;
+    color: #f5f7fa;
+}
+
+.line-chart {
+    height: 150px;
+    border-radius: 14px;
+    background: #0b0f14;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.line-chart svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.ai-card p {
+    color: #c7ced6;
+    line-height: 1.6;
+}
+
+.streak-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.streak-card strong {
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+.streak-card p {
+    color: #9aa4af;
+    margin: 0;
+}
+
+@media (max-width: 1100px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+    }
+    .hero-right {
+        grid-template-columns: 1fr;
+    }
+    .journal-card {
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+    }
+    .hero-actions button {
+        width: 100%;
+    }
+    .card-header,
+    .trade-summary,
+    .mini-grid {
+        flex-direction: column;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* styling for the section under start journaling  */
+
+.hero-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.hero-features div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.hero-features span {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    color: #a78bfa;
+    background: rgba(124, 92, 255, 0.12);
+}
+
+.hero-features h4 {
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+}
+
+.hero-features p {
+    margin: 0;
+    color: #9aa4af;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 700px) {
+    .hero-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/*  end of under start journaling section */
+
+
+/* reviews section start */
+
+.hero-rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.avatar-row {
+    display: flex;
+}
+
+.avatar-row span {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #1f2633;
+    border: 2px solid #0b0f14;
+    display: grid;
+    place-items: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-left: -8px;
+}
+
+.avatar-row span:first-child {
+    margin-left: 0;
+}
+
+.stars {
+    color: #facc15;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.hero-rating p:last-child {
+    margin: 0.2rem 0 0;
+    color: #9aa4af;
+    font-size: 0.9rem;
+}
+
+
+/* end of reviews section stars */
+
+
+/* reflections style */
+
+.reflection-card,
+.recent-trades-card {
+    background: #10161f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.2rem;
+}
+
+.reflection-card p,
+.recent-trades-card p {
+    color: #d3d8df;
+}
+
+.red {
+    color: #ff4d4f;
+}
+
+
+/* end of reflections*/
+
+
+/* start of quick trade add */
+
+.quick-trade-card {
+    background: #10161f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.2rem;
+}
+
+.fake-input,
+.fake-submit {
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+
+.fake-input {
+    background: #0b0f14;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #7f8894;
+}
+
+.direction-preview {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.long-preview,
+.short-preview {
+    flex: 1;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.long-preview {
+    border: 1px solid rgba(46, 204, 113, 0.35);
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.06);
+}
+
+.short-preview {
+    border: 1px solid rgba(255, 77, 79, 0.35);
+    color: #ff4d4f;
+    background: rgba(255, 77, 79, 0.06);
+}
+
+.fake-submit {
+    margin-top: 1rem;
+    background: #7c5cff;
+    color: white;
+    justify-content: center;
+    font-weight: 700;
+}
+
+
+/* end of quick trade card */
+
+
+/* end of HERO styling */
+
+
+/* start of cta for home page */
+
+.signup-cta {
+    margin: 0 3rem 4rem;
+    padding: 2rem;
+    border-radius: 26px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: radial-gradient(circle at left, rgba(124, 92, 255, 0.22), transparent 35%), rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(124, 92, 255, 0.35);
+    box-shadow: 0 0 40px rgba(124, 92, 255, 0.08);
+}
+
+.signup-cta h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0 0 1rem;
+    letter-spacing: -2px;
+}
+
+.signup-cta p {
+    color: #9aa4af;
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 1.1rem 1.2rem;
+    border-radius: 14px;
+    background: #0b0f14;
+    color: #e6edf3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+}
+
+.signup-form input::placeholder {
+    color: #6f7a86;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 1.1rem 1.2rem;
+    border-radius: 14px;
+    background: #7c5cff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.signup-form button:hover {
+    background: #9378ff;
+}
+
+@media (max-width: 900px) {
+    .signup-cta {
+        margin: 0 1.5rem 3rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+
+/* end of cta for homepage */
