@@ -1,0 +1,232 @@
+.new-trade-page {
+    min-height: 100vh;
+    background: #0b0f14;
+    color: white;
+    padding: 2rem;
+}
+
+.new-trade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.new-trade-header p {
+    color: #9aa4af;
+    margin-bottom: 0.4rem;
+}
+
+.new-trade-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.new-trade-header button {
+    padding: 0.9rem 1.4rem;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.new-trade-header button:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* LAYOUT */
+
+.new-trade-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+
+/* FORM */
+
+.trade-entry-form {
+    background: #10161f;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.form-group label {
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    background: #0b0f14;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #7c5cff;
+}
+
+
+/* GRID */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+
+/* DIRECTION BUTTONS */
+
+.direction-select {
+    display: flex;
+    gap: 1rem;
+}
+
+.direction-select button {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #0b0f14;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.direction-select button:first-child {
+    border-color: rgba(46, 204, 113, 0.3);
+    color: #2ecc71;
+}
+
+.direction-select button:last-child {
+    border-color: rgba(255, 77, 79, 0.3);
+    color: #ff4d4f;
+}
+
+.direction-select button:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* SAVE BUTTON */
+
+.save-trade-btn {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient( 135deg, #7c5cff, #9b7bff);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.save-trade-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* PREVIEW PANEL */
+
+.trade-preview-panel {
+    background: #10161f;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 1.5rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.trade-preview-panel h2 {
+    margin: 0;
+}
+
+.upload-box {
+    height: 220px;
+    border-radius: 18px;
+    border: 2px dashed rgba(124, 92, 255, 0.35);
+    display: grid;
+    place-items: center;
+    color: #9aa4af;
+    background: linear-gradient( 135deg, rgba(124, 92, 255, 0.08), transparent);
+}
+
+.preview-card {
+    padding: 1.5rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.preview-card p {
+    color: #9aa4af;
+}
+
+.preview-card h3 {
+    margin: 0.5rem 0;
+}
+
+.preview-card span {
+    color: #7f8894;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+    .new-trade-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .new-trade-page {
+        padding: 1rem;
+    }
+    .new-trade-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .new-trade-header h1 {
+        font-size: 2rem;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .direction-select {
+        flex-direction: column;
+    }
+}
