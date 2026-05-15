@@ -1,10 +1,10 @@
 import chart from "../assets/chartTwice.png";
 
 
-function Hero() {
+function Hero({openModal}) {
     return (
       <section className="hero">
-        <div className="hero-left">
+        <div className="hero-left" id="features">
           <p className="eyebrow">Journal. Review. Improve.</p>
   
           <h1>
@@ -17,7 +17,7 @@ function Hero() {
           </p>
   
           <div className="hero-actions">
-            <button>Start Journaling →</button>
+            <button onClick={openModal}>Start Journaling →</button>
             <button>See How It Works ▷</button>
           </div>
           <div className="hero-features">

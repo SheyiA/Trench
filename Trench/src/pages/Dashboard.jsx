@@ -4,7 +4,8 @@ import "./dashboard.css";
 import testchart from "../assets/trenchChart.png";
 
 
-function Dashboard({onNewTrade}) {
+
+function Dashboard({onNewTrade, onJournalClick}) {
 
   return (
     <div className="dashboard-layout">
@@ -19,7 +20,7 @@ function Dashboard({onNewTrade}) {
 
             <a href="#">Dashboard</a>
 
-            <a href="#">Journal</a>
+            <a href="#" onClick={onJournalClick}>Journal</a>
 
             <a href="#">Analytics</a>
 
@@ -30,6 +31,8 @@ function Dashboard({onNewTrade}) {
             <a href="#">Calendar</a>
 
             <a href="#">Resources</a>
+            
+            <a href="#">Billing</a>
 
             <a href="#" onClick={onNewTrade}>New Trade</a>
 

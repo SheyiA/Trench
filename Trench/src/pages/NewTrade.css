@@ -230,3 +230,14 @@
         flex-direction: column;
     }
 }
+
+.preview-notes {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.preview-notes p {
+    line-height: 1.6;
+    color: #cbd5e1;
+}

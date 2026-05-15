@@ -1,4 +1,4 @@
-function Navbar({onDashboardClick}) {
+function Navbar({onDashboardClick, openModal}) {
     return (
       <nav>
         <div>
@@ -6,16 +6,16 @@ function Navbar({onDashboardClick}) {
         </div>
   
         <div>
-          <a href="#">Dashboard</a>
-          <a href="#">Mentorship</a>
-          <a href="#">Live Rooms</a>
-          <a href="#">Calendar</a>
-          <a href="#">Pricing</a>
+          <a href="#features">Home</a>
+          <a href="#features">Features</a>
+          <a href="#mission">Missions</a>
+          <a href="#pricing">Pricing</a>
+          <a onClick={openModal}>Waitlist</a>
         </div>
   
         <div>
-          <button>Log in</button>
-          <button onClick={onDashboardClick}>Join Beta</button>
+          <button onClick={onDashboardClick}>Log in</button>
+          <button onClick={openModal} >Join Beta</button>
         </div>
 
         <button className="hamburger">

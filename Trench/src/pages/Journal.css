@@ -1,0 +1,226 @@
+.journal-page {
+    min-height: 100vh;
+    background: #0b0f14;
+    color: white;
+    padding: 2rem;
+}
+
+
+/* HEADER */
+
+.journal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.journal-header p {
+    color: #9aa4af;
+    margin-bottom: 0.4rem;
+}
+
+.journal-header h1 {
+    margin: 0;
+    font-size: 2.7rem;
+}
+
+.journal-header button {
+    padding: 1rem 1.4rem;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient( 135deg, #7c5cff, #9d84ff);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.journal-header button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* CONTROLS */
+
+.journal-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.journal-controls input {
+    flex: 1;
+    background: #10161f;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 1rem;
+    color: white;
+    outline: none;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.filter-buttons button {
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #10161f;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filter-buttons button:hover {
+    background: rgba(124, 92, 255, 0.14);
+    border-color: rgba(124, 92, 255, 0.2);
+}
+
+
+/* STATS */
+
+.journal-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.journal-stats div {
+    padding: 1.4rem;
+    border-radius: 20px;
+    background: #10161f;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.journal-stats small {
+    color: #7f8894;
+}
+
+.journal-stats strong {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 2rem;
+}
+
+
+/* TRADE LIST */
+
+.trade-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.trade-history-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1.5rem;
+    background: #10161f;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+.trade-history-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(124, 92, 255, 0.2);
+}
+
+.trade-history-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trade-history-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trade-history-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.trade-history-top p {
+    color: #9aa4af;
+}
+
+.trade-history-top h3 {
+    margin-top: 0.5rem;
+}
+
+.trade-history-top strong {
+    font-size: 1.8rem;
+}
+
+.trade-note {
+    margin: 1.5rem 0;
+    line-height: 1.7;
+    color: #d7dde5;
+}
+
+.trade-tags {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.trade-tags span {
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.green {
+    color: #2ecc71;
+}
+
+.red {
+    color: #ff4d4f;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+    .journal-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .trade-history-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .journal-page {
+        padding: 1rem;
+    }
+    .journal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .journal-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .filter-buttons {
+        overflow-x: auto;
+    }
+    .journal-stats {
+        grid-template-columns: 1fr;
+    }
+}

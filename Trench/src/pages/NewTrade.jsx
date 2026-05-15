@@ -1,6 +1,18 @@
 import "./NewTrade.css";
 
+
+import { useState } from "react";
+
 function NewTrade() {
+
+  const [asset, setAsset] = useState("BTC/USD");
+
+const [direction, setDirection] = useState("Long");
+
+const [setup, setSetup] = useState("");
+
+const [notes, setNotes] = useState("");
+
   return (
     <div className="new-trade-page">
       <div className="new-trade-header">
@@ -16,15 +28,29 @@ function NewTrade() {
         <form className="trade-entry-form">
           <div className="form-group">
             <label>Asset</label>
-            <input type="text" placeholder="BTC/USD" />
-          </div>
+            <input
+  type="text"
+  placeholder="BTC/USD"
+  value={asset}
+  onChange={(e) => setAsset(e.target.value)}
+/>          </div>
 
           <div className="form-group">
             <label>Direction</label>
             <div className="direction-select">
-              <button type="button">Long</button>
-              <button type="button">Short</button>
-            </div>
+            <button
+  type="button"
+  onClick={() => setDirection("Long")}
+>
+  Long
+</button>
+
+<button
+  type="button"
+  onClick={() => setDirection("Short")}
+>
+  Short
+</button>            </div>
           </div>
 
           <div className="form-grid">
@@ -51,8 +77,12 @@ function NewTrade() {
 
           <div className="form-group">
             <label>Setup Type</label>
-            <input type="text" placeholder="Liquidity sweep + retest" />
-          </div>
+            <input
+  type="text"
+  placeholder="Liquidity sweep + retest"
+  value={setup}
+  onChange={(e) => setSetup(e.target.value)}
+/>          </div>
 
           <div className="form-group">
             <label>Emotion</label>
@@ -67,8 +97,11 @@ function NewTrade() {
 
           <div className="form-group">
             <label>Trade Notes</label>
-            <textarea placeholder="What happened? Why did you take this trade? What would you improve?" />
-          </div>
+            <textarea
+  placeholder="What happened? Why did you take this trade? What would you improve?"
+  value={notes}
+  onChange={(e) => setNotes(e.target.value)}
+/>          </div>
 
           <button className="save-trade-btn" type="button">
             Save Trade
@@ -83,10 +116,19 @@ function NewTrade() {
           </div>
 
           <div className="preview-card">
-            <p>BTC/USD</p>
-            <h3>Long Setup</h3>
-            <span>Waiting for trade details...</span>
-          </div>
+          <p>{asset || "BTC/USD"}</p>
+
+<h3>{direction} Setup</h3>
+
+<span>
+  {setup || "Waiting for setup details..."}
+</span>
+
+<div className="preview-notes">
+  <p>
+    {notes || "Trade notes preview will appear here."}
+  </p>
+</div>          </div>
         </aside>
       </div>
     </div>
