@@ -1,4 +1,4 @@
-function Navbar() {
+function Navbar({onDashboardClick}) {
     return (
       <nav>
         <div>
@@ -15,7 +15,7 @@ function Navbar() {
   
         <div>
           <button>Log in</button>
-          <button>Join Beta</button>
+          <button onClick={onDashboardClick}>Join Beta</button>
         </div>
 
         <button className="hamburger">
