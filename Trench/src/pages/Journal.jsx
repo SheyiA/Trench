@@ -1,5 +1,7 @@
 import "./Journal.css";
 import testchart from "../assets/trenchChart.png";
+import { Link } from "react-router-dom";
+
 
 function Journal() {
   return (
@@ -10,7 +12,7 @@ function Journal() {
           <h1>Your Trading Journal</h1>
         </div>
 
-        <button>+ New Trade</button>
+         <Link to="/new-trade" className="back-btn"> + New Trade </Link>   
       </header>
 
       <section className="journal-controls">

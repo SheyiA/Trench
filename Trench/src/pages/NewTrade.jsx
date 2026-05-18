@@ -1,4 +1,5 @@
 import "./NewTrade.css";
+import { Link } from "react-router-dom";
 
 
 import { useState } from "react";
@@ -21,7 +22,7 @@ const [notes, setNotes] = useState("");
           <h1>Add New Trade</h1>
         </div>
 
-        <button>Back to Dashboard</button>
+       <Link to="/dashboard" className="back-btn"> Back to Dashboard </Link> 
       </div>
 
       <div className="new-trade-layout">

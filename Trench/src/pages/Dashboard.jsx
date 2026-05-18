@@ -1,11 +1,10 @@
-
+import { Link } from "react-router-dom";
 
 import "./dashboard.css";
 import testchart from "../assets/trenchChart.png";
 
 
-
-function Dashboard({onNewTrade, onJournalClick}) {
+function Dashboard({onNewTrade}) {
 
   return (
     <div className="dashboard-layout">
@@ -18,9 +17,12 @@ function Dashboard({onNewTrade, onJournalClick}) {
 
           <nav>
 
-            <a href="#">Dashboard</a>
+            <Link to="/dashboard">Dashboard</Link>
 
-            <a href="#" onClick={onJournalClick}>Journal</a>
+            <Link to="/journal">Journal</Link>
+
+            <Link to="/new-trade" onClick={onNewTrade}>New Trade</Link>
+
 
             <a href="#">Analytics</a>
 
@@ -34,7 +36,6 @@ function Dashboard({onNewTrade, onJournalClick}) {
             
             <a href="#">Billing</a>
 
-            <a href="#" onClick={onNewTrade}>New Trade</a>
 
           </nav>
 

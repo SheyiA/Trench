@@ -1,0 +1,83 @@
+.signin-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: radial-gradient(circle at top, rgba(124, 92, 255, 0.12), transparent 40%), #070b11;
+}
+
+.signin-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 2.5rem;
+    border-radius: 30px;
+    background: linear-gradient(145deg, rgba(124, 92, 255, 0.08), rgba(255, 255, 255, 0.02)), #10161f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+.signin-logo {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.signin-card h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin: 1rem 0;
+}
+
+.signin-text {
+    color: #9aa4af;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.signin-form input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #0b0f14;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.signin-form input:focus {
+    border-color: #7c5cff;
+}
+
+.signin-form button {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 16px;
+    background: #7c5cff;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.signin-footer-text {
+    margin-top: 2rem;
+    text-align: center;
+    color: #7f8894;
+}
+
+.signin-footer-text a {
+    color: #a78bfa;
+    text-decoration: none;
+}
