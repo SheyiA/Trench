@@ -6,6 +6,7 @@ import SignupCTA from "./components/SignupCTA";
 import Mission from "./components/Mission";
 import Pricing from "./components/Pricing";
 import WaitlistModal from "./components/WaitlistModal";
+import Footer from "./components/Footer";
 // temp page routing 
 import Dashboard from "./pages/Dashboard";
 import NewTrade from "./pages/NewTrade";
@@ -37,6 +38,8 @@ function App() {
 {showModal && (
   <WaitlistModal onClose={() => setShowModal(false)} />
 )}
+
+<Footer/>
     </>
   );
 }
