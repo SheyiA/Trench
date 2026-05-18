@@ -6,17 +6,19 @@ function WaitlistModal({ onClose }) {
             ×
           </button>
   
-          <p className="eyebrow">Early Access</p>
+          <p className="eyebrow">Early Access | Create An Account </p>
   
           <h2>Join the Trench waitlist</h2>
   
           <p className="modal-description">
+  
             Get updates, early access invites, and help shape the trading journal built for serious improvement.
           </p>
   
           <form className="waitlist-form">
             <input type="text" placeholder="Your name" />
             <input type="email" placeholder="Email address" />
+            <input type="password" placeholder="Password" />
   
             <select>
               <option>Trading Focus</option>
@@ -33,7 +35,7 @@ function WaitlistModal({ onClose }) {
               <option>Advanced</option>
             </select>
   
-            <button type="button">Join Waitlist →</button>
+            <button type="button">   Create Account →</button>
           </form>
         </div>
       </div>
