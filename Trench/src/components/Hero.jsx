@@ -46,17 +46,20 @@ function Hero({openModal}) {
   </div>
 </div>
 
-<div className="hero-rating">
-  <div className="avatar-row">
-    <span>A</span>
-    <span>K</span>
-    <span>M</span>
-    <span>Z</span>
+<div className="community-proof">
+  <div className="community-icon">
+    ✦
   </div>
 
-  <div>
-    <p className="stars">★★★★★</p>
-    <p>4.9/5 from 2,000+ traders</p>
+  <div className="community-content">
+    <h4>Built for serious improvement</h4>
+
+    <p>
+      Designed for traders who review,
+      refine, and execute better.
+    </p>
+
+    <span>Focused on consistency & execution</span>
   </div>
 </div>
 

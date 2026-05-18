@@ -1138,3 +1138,62 @@ small {
 
 
 /* end of btn to go back  */
+
+
+/* communitu proof section start */
+
+.community-proof {
+    margin-top: 2.5rem;
+    width: 100%;
+    max-width: 470px;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.25rem;
+    border-radius: 24px;
+    background: linear-gradient( 145deg, rgba(18, 22, 35, 0.96), rgba(10, 12, 20, 0.92));
+    border: 1px solid rgba(124, 92, 255, 0.14);
+    box-shadow: 0 10px 40px rgba(124, 92, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+}
+
+.community-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: radial-gradient( circle at top, rgba(140, 110, 255, 0.25), rgba(124, 92, 255, 0.08));
+    border: 1px solid rgba(124, 92, 255, 0.2);
+    color: #a78bfa;
+    font-size: 1.5rem;
+}
+
+.community-content h4 {
+    margin: 0 0 0.45rem;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.community-content p {
+    margin: 0;
+    color: #a1a8b3;
+    line-height: 1.6;
+    font-size: 0.92rem;
+}
+
+.community-content span {
+    display: inline-block;
+    margin-top: 0.9rem;
+    color: #8b5cf6;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+
+/* communitu proof section end */
